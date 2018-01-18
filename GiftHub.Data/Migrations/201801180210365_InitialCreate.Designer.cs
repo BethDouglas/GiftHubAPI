@@ -13,7 +13,7 @@ namespace GiftHub.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201801180133174_InitialCreate"; }
+            get { return "201801180210365_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

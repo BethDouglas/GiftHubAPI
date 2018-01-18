@@ -20,7 +20,6 @@ using static GiftHub.API.ApplicationUserManager;
 
 namespace GiftHub.API.Controllers
 {
-    [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
@@ -132,7 +131,8 @@ namespace GiftHub.API.Controllers
         }
 
         //  GET api/Account/AdminCheck
-        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        //[HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [AllowAnonymous]
         [Route("adminCheck")]
         [HttpGet]
         public bool GetAdmin()
